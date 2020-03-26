@@ -16,7 +16,7 @@ ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 COPY launch.sh /
-RUN maven install
+RUN mvn install
 COPY target/TestApp1.jar /TestApp1.jar 
 RUN chmod +x /launch.sh
 
